@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\MonitoringController;
 use App\Http\Controllers\Api\PenjadwalanPakanController;
+use App\Http\Controllers\Api\SensorAirController;
 use App\Http\Controllers\Api\SensorJarakController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -24,3 +25,7 @@ Route::apiResource('/v1/penjadwalanpakan', PenjadwalanPakanController::class);
 Route::get('/v1/sensorjarak/bacadata', [SensorJarakController::class, 'bacadata'])->name('api.sensorjarak.bacadata');
 Route::get('/v1/sensorjarak/delete_all', [SensorJarakController::class, 'deleteAll'])->name('api.sensorjarak.delete_all');
 Route::apiResource('/v1/sensorjarak', SensorJarakController::class);
+
+Route::get('/v1/sensorair/bacadata', [SensorAirController::class, 'bacadata'])->name('api.sensorair.bacadata');
+Route::get('/v1/sensorair/delete_all', [SensorAirController::class, 'deleteAll'])->name('api.sensorair.delete_all');
+Route::resource('/v1/sensorair', SensorAirController::class);

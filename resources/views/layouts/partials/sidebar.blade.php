@@ -31,8 +31,7 @@
                 <!-- Add icons to the links using the .nav-icon class
                 with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="{{ route('dashboard') }}"
-                        class="nav-link {{ request()->is('dashboard*') ? 'active' : '' }}">
+                    <a href="{{ route('dashboard') }}" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
@@ -41,8 +40,7 @@
                 </li>
                 <li class="nav-header">MASTER</li>
                 <li class="nav-item">
-                    <a href="{{ route('monitoring.index') }}"
-                        class="nav-link {{ request()->is('monitoring*') ? 'active' : '' }}">
+                    <a href="{{ route('monitoring.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-desktop"></i>
                         <p>
                             Monitoring
@@ -50,8 +48,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('penjadwalan.index') }}"
-                        class="nav-link {{ request()->is('penjadwalan*') ? 'active' : '' }}">
+                    <a href="{{ route('penjadwalan.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-calendar-alt"></i>
                         <p>
                             Penjadwalan Pakan
@@ -59,8 +56,8 @@
                     </a>
                 </li>
 
-                <li class="nav-item {{ request()->is(['jarak*']) ? 'menu-is-opening menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ request()->is(['jarak*']) ? 'active' : '' }}">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-chart-pie"></i>
                         <p>
                             Data Sensor
@@ -69,14 +66,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('jarak.index') }}"
-                                class="nav-link {{ request()->is('jarak*') ? 'active' : '' }}">
+                            <a href="{{ route('jarak.index') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Sensor Jarak</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/charts/flot.html" class="nav-link">
+                            <a href="{{ route('sensorair.index') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Sensor PH Air</p>
                             </a>

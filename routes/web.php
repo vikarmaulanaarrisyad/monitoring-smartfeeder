@@ -5,6 +5,7 @@ use App\Http\Controllers\{
     MonitoringController,
     PenjadwalanPakanController,
     ReportController,
+    SensorAirController,
     SensorJarakController,
     SettingController
 };
@@ -24,6 +25,12 @@ Route::resource('/penjadwalan', PenjadwalanPakanController::class);
 // Sensor Jarak
 Route::get('/jarak/data', [SensorJarakController::class, 'data'])->name('jarak.data');
 Route::resource('/jarak', SensorJarakController::class);
+
+// Sensor PH Air
+Route::get('/sensorair/data', [SensorAirController::class, 'data'])->name('sensorair.data');
+Route::resource('/sensorair', SensorAirController::class);
+
+
 // Report
 Route::get('/report', [ReportController::class, 'index'])->name('report.index');
 Route::get('/report/data/{tanggal}', [ReportController::class, 'data'])->name('report.data');
