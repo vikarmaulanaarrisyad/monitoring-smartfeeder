@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\{
     DashboardController,
+    JenisIkanController,
     MonitoringController,
     PenjadwalanPakanController,
     ReportController,
@@ -30,12 +31,13 @@ Route::resource('/jarak', SensorJarakController::class);
 Route::get('/sensorair/data', [SensorAirController::class, 'data'])->name('sensorair.data');
 Route::resource('/sensorair', SensorAirController::class);
 
-
 // Report
 Route::get('/report', [ReportController::class, 'index'])->name('report.index');
 Route::get('/report/data/{tanggal}', [ReportController::class, 'data'])->name('report.data');
-// Route::get('/report/pdf/{start}/{end}', [ReportController::class, 'exportPDF'])->name('report.export_pdf');
-// Route::get('/report/excel/{start}/{end}', [ReportController::class, 'exportExcel'])->name('report.export_excel');
+
+Route::get('/jenisikan/data', [JenisIkanController::class, 'data'])->name('jenisikan.data');
+Route::resource('jenisikan', JenisIkanController::class);
+
 
 Route::get('/setting', [SettingController::class, 'index'])
     ->name('setting.index');
