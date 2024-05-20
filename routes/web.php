@@ -10,6 +10,7 @@ use App\Http\Controllers\{
     SensorJarakController,
     SettingController
 };
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -43,3 +44,7 @@ Route::get('/setting', [SettingController::class, 'index'])
     ->name('setting.index');
 Route::put('/setting/{setting}', [SettingController::class, 'update'])
     ->name('setting.update');
+
+Route::get('/linkstorage', function () {
+    Artisan::call('storage:link');
+});
