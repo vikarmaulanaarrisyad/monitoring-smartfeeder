@@ -25,11 +25,11 @@ return new class extends Migration
             $table->string('short_description')->nullable();
             $table->string('keyword')->nullable();
             $table->string('path_image')
-                ->nullable();
+                ->default('default.jpg');
             $table->string('path_image_header')
-                ->nullable();
+                ->default('default.jpg');
             $table->string('path_image_footer')
-                ->nullable();
+                ->default('default.jpg');
             $table->string('instagram_link')->default('-')->nullable();
             $table->string('twitter_link')->default('-')->nullable();
             $table->string('fanpage_link')->default('-')->nullable();
