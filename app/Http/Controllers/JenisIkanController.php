@@ -110,5 +110,7 @@ class JenisIkanController extends Controller
         $data = JenisIkan::find($id);
 
         $data->delete();
+
+        return response()->json(['message' => 'Data berhasil dihapus'], 200);
     }
 }

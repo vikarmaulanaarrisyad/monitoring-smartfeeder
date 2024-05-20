@@ -21,16 +21,9 @@ return new class extends Migration
                 ->nullable();
             $table->string('address')
                 ->nullable();
-            $table->string('phone_hours')->nullable();
             $table->string('company_name')->nullable();
             $table->string('short_description')->nullable();
             $table->string('keyword')->nullable();
-            $table->char('postal_code', 5)
-                ->nullable();
-            $table->string('city')
-                ->nullable();
-            $table->string('province')
-                ->nullable();
             $table->string('path_image')
                 ->nullable();
             $table->string('path_image_header')

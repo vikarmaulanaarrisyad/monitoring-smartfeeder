@@ -20,12 +20,7 @@ class SettingController extends Controller
         $rules = [
             'owner_name' => 'required',
             'email' => 'required|email',
-            'phone' => 'required|string|min:11|max:17',
-            'phone_hours' => 'required',
             'about' => 'required',
-            'address' => 'nullable',
-            'city' => 'nullable',
-            'province' => 'nullable',
             'company_name' => 'required',
             'short_description' => 'required',
             'keyword' => 'nullable'
