@@ -40,7 +40,7 @@
                     <hr>
                 </div>
             </div>
-            <div class="card card-danger">
+            {{--  <div class="card card-danger">
                 <div class="card-header">
                     <h3 class="card-title"><i class="fas fa-fish"></i> Ikan</h3>
                 </div>
@@ -56,22 +56,10 @@
                     </div>
 
                 </div>
-            </div>
+            </div>  --}}
         </div>
 
-        <div class="col-md-8">
-            <div class="card card-primary">
-                <div class="card-header ui-sortable-handle " style="cursor: move;">
-                    <h3 class="card-title">
-                        <i class="fas fa-fish mr-1"></i>
-                        Data Grafik Pakan
-                    </h3>
-                </div>
-                <div class="card-body">
-                    <canvas id="myChart" height="300" style="height: 300px;"></canvas>
-                </div>
-            </div>
-        </div>
+       
     </div>
 @endsection
 @include('monitoring.scripts')

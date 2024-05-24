@@ -11,8 +11,7 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="{{ asset('AdminLTE/dist/img/user1-128x128.jpg') }}" alt=""
-                    class="img-circle elevation-2">
+                <img src="{{ Storage::url(auth()->user()->path_image) }}" alt="" class="img-circle elevation-2">
             </div>
             <div class="info">
                 <a href="{{ route('profile.show') }}" class="d-block" data-toggle="tooltip" data-placement="top"

@@ -8,7 +8,8 @@ use App\Http\Controllers\{
     ReportController,
     SensorAirController,
     SensorJarakController,
-    SettingController
+    SettingController,
+    UserProfileInformationController
 };
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
@@ -44,6 +45,9 @@ Route::get('/setting', [SettingController::class, 'index'])
     ->name('setting.index');
 Route::put('/setting/{setting}', [SettingController::class, 'update'])
     ->name('setting.update');
+
+Route::get('/user/profile', [UserProfileInformationController::class, 'show'])
+    ->name('profile.show');
 
 Route::get('/linkstorage', function () {
     Artisan::call('storage:link');
